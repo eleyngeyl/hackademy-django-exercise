@@ -1,0 +1,35 @@
+<html lang=“en”>
+
+    <head>
+
+        <style>
+            body {
+                font-family: 'Source Sans Regular', sans-serif;
+                padding: 10px;
+                background: #B9B7BD
+            }
+        </style>
+
+        <title>
+            Profile
+        </title>
+    </head>
+
+    <body>
+        
+        <header class="header">
+            <h1 style="font-family: 'Playfair Display', serif; font-weight: bold;"> Hi! I'm {{ user.first_name }} :) </h1>
+        </header>
+
+        <p style="font-family: 'Playfair Display', serif; font-size: larger;">
+            <em>Description:</em> <strong> {{ user.profile.description }} </strong>
+        </p>
+        
+        <p style="font-family: 'Playfair Display', serif; font-size: larger;"> <em> Image: </em> {{ user.profile.profile_picture.url }} </p>
+        
+        <p>
+            <img src="{{ MEDIA_ROOT }}{{ user.profile.profile_picture.url }}" style="height:auto; width:300;">
+        </p>
+
+    </body>
+</html>
