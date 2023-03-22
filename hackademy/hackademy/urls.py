@@ -11,6 +11,7 @@ urlpatterns = [
     path('profile/', views.profile, name="profile"),
     path('login/', views.Login.as_view()),
     path('register/', views.registration),
+    path('api/', include('api.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
